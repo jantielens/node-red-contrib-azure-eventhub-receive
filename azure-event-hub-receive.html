@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    RED.nodes.registerType('azure-event-hub-receive', {
+        category: 'input',
+        color: '#0080FF',
+        defaults: {
+            name: { value: "" },
+            connectionstring: { value: "" },
+            consumergroup: { value: "" }
+        },
+        inputs: 0,
+        outputs: 1,
+        icon: "icon.png",
+        label: function () {
+            return this.name || "azure-event-hub-receive";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="azure-event-hub-receive">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-connectionstring"><i class="icon-tag"></i> Event Hub Connection String</label>
+        <input type="text" id="node-input-connectionstring" placeholder="E.g. Endpoint=sb://XXX.servicebus.windows.net/;SharedAccessKeyName=XXX;SharedAccessKey=XXX;EntityPath=XXX">
+    </div>
+    <div class="form-row">
+        <label for="node-input-consumergroup"><i class="icon-tag"></i> Event Hub Consumer Group</label>
+        <input type="text" id="node-input-consumergroup" placeholder="E.g. $default">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="azure-event-hub-receive">
+    <p>A simple node that receives messages from an Azure Event Hub.</p>
+</script>
