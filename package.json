@@ -1,7 +1,7 @@
 {
   "name": "node-red-contrib-azure-eventhub-receive",
   "description": "A simple node that receives messages from an Azure Event Hub.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": {
     "name": "Jan Tielens",
     "url": "http://twitter.com/jantielens"
